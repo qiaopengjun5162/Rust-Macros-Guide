@@ -1,5 +1,4 @@
 use anyhow::{anyhow, Result};
-use macros::my_try;
 
 fn main() -> Result<()> {
     // let ret = f3(f2(f1("hello")?)?)?;
@@ -21,3 +20,14 @@ fn f3(s: impl AsRef<str>) -> Result<String> {
 }
 
 // ➜ cargo run --example my_try --quiet
+
+// ? operator. How to simulate it?
+#[macro_export]
+macro_rules! my_try {
+    ($expr:expr) => {{
+        match $expr {
+            Ok(val) => val,
+            Err(err) => return Err(err.into()),
+        }
+    }};
+}
