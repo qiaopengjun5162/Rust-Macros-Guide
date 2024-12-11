@@ -1,7 +1,7 @@
-use macros::EnumFrom;
+use macros::EnumFromDarling;
 
 #[allow(unused)]
-#[derive(EnumFrom, Debug)]
+#[derive(EnumFromDarling, Debug)]
 enum Direction<T> {
     Up(DirectionUp<T>),
     Down,
@@ -17,7 +17,6 @@ struct DirectionUp<T> {
 }
 
 fn main() {
-    // let direction = Direction::Up(DirectionUp { speed: 10 });
     let direction: Direction<i32> = DirectionUp::new(10).into();
     println!("Direction: {:?}", direction);
     let left: Direction<i32> = 10.into();
@@ -31,21 +30,3 @@ impl<T> DirectionUp<T> {
 }
 
 // cargo run --example enum_macro --quiet
-
-// impl From<DirectionUp> for Direction {
-//     fn from(direction: DirectionUp) -> Self {
-//         Direction::Up(direction)
-//     }
-// }
-
-// impl<T> From<i32> for Direction<T> {
-//     fn from(value: i32) -> Self {
-//         Direction::Left(value as u32)
-//     }
-// }
-
-// impl<T> From<DirectionUp<T>> for Direction<T> {
-//     fn from(direction: DirectionUp<T>) -> Self {
-//         Direction::Up(direction)
-//     }
-// }

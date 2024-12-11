@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Features
+
+- support generics for EnumFrom - ([22cf73d](https://github.com/qiaopengjun5162/Rust-Macros-Guide/commit/22cf73d51e8b41af24aea37323737ef2b17099b2)) - QiaoPengjun5162
+
+---
+## [0.1.1-enum-from-macro](https://github.com/qiaopengjun5162/Rust-Macros-Guide/compare/v0.1.0-macro_rules..v0.1.1-enum-from-macro) - 2024-12-10
+
+### Features
+
+- support EnumFrom macro - ([596a3c0](https://github.com/qiaopengjun5162/Rust-Macros-Guide/commit/596a3c0cd8649f8f8b8b68224c36066a976d2af5)) - QiaoPengjun5162
+
+### Other
+
+- Merge pull request #1 from qiaopengjun5162/feature/proc_macro
+
+support EnumFrom macro - ([cc9b178](https://github.com/qiaopengjun5162/Rust-Macros-Guide/commit/cc9b1783cef5096343261967efd3efa27f2350c4)) - Paxon Qiao 乔鹏军
+
 ### Refactoring
 
 - change crate to proc-macro - ([c9ca571](https://github.com/qiaopengjun5162/Rust-Macros-Guide/commit/c9ca5715bad86649e4839fce0a9bd35cf8eb23a2)) - QiaoPengjun5162
